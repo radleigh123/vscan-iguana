@@ -1,0 +1,41 @@
+cloud-architecture-diagram
+
+title Android Mobile App Architecture
+
+// Main components
+User [icon: user]
+
+Android App [icon: android]
+
+Firebase [icon: firebase] {
+  Firebase Authentication [icon: firebase-auth]
+  Firebase Firestore [icon: firebase-firestore]
+}
+
+// Optional backend
+Backend [icon: server] {
+  REST API Layer [icon: nodejs, label: "REST API"]
+  Firebase Cloud Functions [icon: firebase-functions]
+}
+
+// Development tools
+Development Tools [icon: tools] {
+  Android Studio [icon: android]
+  Gradle [icon: gradle]
+  Git [icon: git]
+  GitHub [icon: github]
+}
+
+// Connections
+User > Android App
+Android App > Firebase Authentication
+Android App > Firebase Firestore
+Android App > REST API Layer
+REST API Layer > Firebase Firestore
+Firebase Cloud Functions > Firebase Firestore
+
+// Development tools connections
+Android Studio > Gradle
+Gradle > Git
+Git > GitHub
+
