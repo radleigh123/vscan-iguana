@@ -5,13 +5,14 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.intprog.vscan.ui.account.AccountActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_temp_splash)
 
         // Simulates a splash screen
         var i = 3
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
                 delay(500)
                 i--
             }
-            startActivity(Intent(this@MainActivity, LoginActivity2::class.java))
+            startActivity(Intent(this@MainActivity, AccountActivity::class.java))
             finish()
         }
     }

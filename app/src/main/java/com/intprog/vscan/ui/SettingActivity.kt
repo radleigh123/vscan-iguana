@@ -1,15 +1,13 @@
-package com.intprog.vscan
+package com.intprog.vscan.ui
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Switch
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.intprog.vscan.R
 
 class SettingActivity : AppCompatActivity() {
 

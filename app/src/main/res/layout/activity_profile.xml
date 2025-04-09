@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_gradient"
         android:paddingBottom="24dp"
-        tools:context=".ProfileActivity">
+        tools:context=".ui.home.ProfileActivity">
 
         <ImageView
             android:id="@+id/ivBackArrow"

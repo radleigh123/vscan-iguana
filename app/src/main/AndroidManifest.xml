@@ -16,25 +16,28 @@
         android:theme="@style/Theme.VScan"
         tools:targetApi="31">
         <activity
-            android:name=".ForgotPassword"
+            android:name=".ui.account.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.account.ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".LandingActivity"
+            android:name=".ui.account.RegisterFragment"
             android:exported="false" />
         <activity
-            android:name=".SettingActivity"
+            android:name=".ui.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".ui.SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".DeveloperActivity"
+            android:name=".ui.home.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity2"
+            android:name=".ui.DeveloperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.account.AccountActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -1,4 +1,4 @@
-package com.intprog.vscan
+package com.intprog.vscan.ui.home
 
 import android.content.Context
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.intprog.vscan.R
 
 class ProfileActivity : AppCompatActivity() {
 

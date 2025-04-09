@@ -9,7 +9,7 @@
     android:background="@drawable/bg_gradient"
     android:padding="24dp"
     android:gravity="center_horizontal"
-    tools:context=".LandingActivity">
+    tools:context=".ui.home.HomeActivity">
 
     <TextView
         android:id="@+id/welcomeText"
