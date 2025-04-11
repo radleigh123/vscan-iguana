@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
@@ -32,13 +34,16 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btnRegister = viewBinding.btnRegister
-
-        btnRegister.setOnClickListener {
+        viewBinding.btnRegister.setOnClickListener {
             val email = viewBinding.etEmail.text.toString()
             val password = viewBinding.etPassword.text.toString()
 
             if (email.isEmpty() || password.isEmpty()) {
+                Snackbar.make(
+                    view,
+                    "Email or Password must not be empty",
+                    Snackbar.LENGTH_SHORT
+                ).show()
                 Log.i("RegisterFragment", "Email or Password must not be empty")
                 return@setOnClickListener
             }
@@ -52,14 +57,21 @@ class RegisterFragment : Fragment() {
                     } else {
                         Log.w("RegisterFragment", "Registration failed", task.exception)
                         if (task.exception is FirebaseAuthInvalidCredentialsException) {
+                            Snackbar.make(view, "Invalid email format", Snackbar.LENGTH_SHORT).show()
                             Log.i("RegisterFragment", "Invalid email format")
                         } else if (task.exception is FirebaseAuthWeakPasswordException) {
+                            Snackbar.make(view, "Weak password", Snackbar.LENGTH_SHORT).show()
                             Log.i("RegisterFragment", "Weak password")
                         } else {
+                            Snackbar.make(view, "Registration failed: ${task.exception?.message}", Snackbar.LENGTH_SHORT).show()
                             Log.i("RegisterFragment", "Registration failed: ${task.exception?.message}")
                         }
                     }
                 }
+        }
+
+        viewBinding.btnLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_RegisterFragment_to_LoginFragment)
         }
     }
 

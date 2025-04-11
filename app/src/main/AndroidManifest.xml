@@ -19,7 +19,7 @@
             android:name=".ui.account.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.account.ForgotPassword"
+            android:name=".ui.account.ForgotPasswordFragment"
             android:exported="false" />
         <activity
             android:name=".ui.account.RegisterFragment"
@@ -34,7 +34,7 @@
             android:name=".ui.home.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DeveloperActivity"
+            android:name=".ui.home.DeveloperFragment"
             android:exported="false" />
         <activity
             android:name=".ui.account.AccountActivity"

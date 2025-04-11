@@ -11,4 +11,10 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black_20">#66000000</color>
+
+    <color name="background">#FAFAFA</color>
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
+    <color name="linkText">#1E88E5</color>
 </resources>

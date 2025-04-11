@@ -14,6 +14,12 @@
         <action
             android:id="@+id/action_LoginFragment_to_RegisterFragment"
             app:destination="@id/RegisterFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_ForgotPasswordFragment"
+            app:destination="@id/ForgotPasswordFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_HomeActivity"
+            app:destination="@id/HomeActivity" />
     </fragment>
 
     <fragment
@@ -28,5 +34,23 @@
             app:destination="@+id/LoginFragment"
             />
     </fragment>
+
+    <fragment
+        android:id="@+id/ForgotPasswordFragment"
+        android:name="com.intprog.vscan.ui.account.ForgotPasswordFragment"
+        android:label="Forgot Password Fragment"
+        tools:layout="@layout/fragment_forgot_password"
+        >
+        <action
+            android:id="@+id/action_ForgotPasswordFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            />
+    </fragment>
+
+    <activity
+        android:id="@+id/HomeActivity"
+        android:name="com.intprog.vscan.ui.home.HomeActivity"
+        android:label="Home Activity"
+        tools:layout="@layout/activity_home" />
 
 </navigation>

@@ -78,4 +78,6 @@
     <string name="logoutno_button">No</string>
     <string name="goodbyemessage">Thank you for using VSCAN! Your car\'s engine may be off, but we\'ll keep things running smoothly until you\'re back. Logout successful. Drive safe and see you on the road soon!</string>
     <string name="VSCANcredits">© 2025 VSCAN. All rights reserved.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

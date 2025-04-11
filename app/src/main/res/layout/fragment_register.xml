@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Register"
-            android:textSize="24sp"
+            android:textSize="34sp"
             android:textStyle="bold"
             android:gravity="center"
             app:layout_constraintTop_toTopOf="@id/guideline"
@@ -96,23 +96,83 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            style="?attr/textInputFilledStyle"
+            android:id="@+id/filledTextFieldFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="FIRST NAME"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@id/filledTextFieldPassword"
+            android:layout_marginTop="30dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="?attr/textInputFilledStyle"
+            android:id="@+id/filledTextFieldLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="LAST NAME"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@id/filledTextFieldFirstName"
+            android:layout_marginTop="30dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:id="@+id/btnRegister"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="LOGIN"
+            android:text="REGISTER"
             android:textAllCaps="true"
             android:textSize="16sp"
             android:textColor="@color/white"
             android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
-            app:layout_constraintTop_toBottomOf="@id/filledTextFieldPassword"
+            app:layout_constraintTop_toBottomOf="@id/filledTextFieldLastName"
             app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
             android:paddingVertical="13dp"
             android:backgroundTint="@color/black_20"
             android:layout_marginHorizontal="20dp"
+            />
+
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@id/btnRegister"
+            android:layout_marginHorizontal="20dp"
+            android:paddingVertical="13dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

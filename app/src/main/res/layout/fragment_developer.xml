@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true"
+    tools:context="ui.home.DeveloperFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/titleAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="About Page"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Developer Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/devCard1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:layout_constraintTop_toBottomOf="@id/titleAbout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Developer Name -->
+                <TextView
+                    android:id="@+id/tvDev1Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Jose"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/primaryText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivDev1Image"
+                    app:layout_constraintBottom_toTopOf="@id/tvDev1Role"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Developer Role -->
+                <TextView
+                    android:id="@+id/tvDev1Role"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Project Manager"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondaryText"
+                    app:layout_constraintTop_toBottomOf="@id/tvDev1Name"
+                    app:layout_constraintStart_toStartOf="@id/tvDev1Name"
+                    app:layout_constraintEnd_toStartOf="@id/ivDev1Image"/>
+
+                <!-- Developer Image -->
+                <ImageView
+                    android:id="@+id/ivDev1Image"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_jc"
+                    android:contentDescription="Developer Image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <!-- Contact Details: Email -->
+                <TextView
+                    android:id="@+id/tvEmailLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textColor="@color/primaryText"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvDev1Role"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvDev1Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lapidezjane@gmail.com"
+                    android:textColor="@color/linkText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="@id/tvEmailLabel"
+                    app:layout_constraintStart_toEndOf="@id/tvEmailLabel"
+                    android:layout_marginStart="8dp"/>
+
+                <!-- Contact Details: Phone -->
+                <TextView
+                    android:id="@+id/tvPhoneLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:"
+                    android:textColor="@color/primaryText"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvDev1Phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0935 468 2013"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="@id/tvPhoneLabel"
+                    app:layout_constraintStart_toEndOf="@id/tvPhoneLabel"
+                    android:layout_marginStart="8dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Developer Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/devCard2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:layout_constraintTop_toBottomOf="@id/devCard1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Developer Name -->
+                <TextView
+                    android:id="@+id/tvDev2Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Anthony"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/primaryText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivDev2Image"
+                    app:layout_constraintBottom_toTopOf="@id/tvDev2Role"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Developer Role -->
+                <TextView
+                    android:id="@+id/tvDev2Role"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Frontend Developer"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondaryText"
+                    app:layout_constraintTop_toBottomOf="@id/tvDev2Name"
+                    app:layout_constraintStart_toStartOf="@id/tvDev2Name"
+                    app:layout_constraintEnd_toStartOf="@id/ivDev2Image"/>
+
+                <!-- Developer Image -->
+                <ImageView
+                    android:id="@+id/ivDev2Image"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile"
+                    android:contentDescription="Developer Image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <!-- Contact Details: Email -->
+                <TextView
+                    android:id="@+id/tvEmailLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textColor="@color/primaryText"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvDev2Role"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvDev2Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lapidezjane@gmail.com"
+                    android:textColor="@color/linkText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="@id/tvEmailLabel2"
+                    app:layout_constraintStart_toEndOf="@id/tvEmailLabel2"
+                    android:layout_marginStart="8dp"/>
+
+                <!-- Contact Details: Phone -->
+                <TextView
+                    android:id="@+id/tvPhoneLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:"
+                    android:textColor="@color/primaryText"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmailLabel2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvDev2Phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0935 468 2013"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="@id/tvPhoneLabel2"
+                    app:layout_constraintStart_toEndOf="@id/tvPhoneLabel2"
+                    android:layout_marginStart="8dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Developer Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/devCard3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:layout_constraintTop_toBottomOf="@id/devCard2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Developer Name -->
+                <TextView
+                    android:id="@+id/tvDev3Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Keane"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/primaryText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivDev3Image"
+                    app:layout_constraintBottom_toTopOf="@id/tvDev3Role"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Developer Role -->
+                <TextView
+                    android:id="@+id/tvDev3Role"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Backend Developer"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondaryText"
+                    app:layout_constraintTop_toBottomOf="@id/tvDev3Name"
+                    app:layout_constraintStart_toStartOf="@id/tvDev3Name"
+                    app:layout_constraintEnd_toStartOf="@id/ivDev3Image"/>
+
+                <!-- Developer Image -->
+                <ImageView
+                    android:id="@+id/ivDev3Image"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_me"
+                    android:contentDescription="Developer Image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <!-- Contact Details: Email -->
+                <TextView
+                    android:id="@+id/tvEmailLabel3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textColor="@color/primaryText"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvDev3Role"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvDev3Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lapidezjane@gmail.com"
+                    android:textColor="@color/linkText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="@id/tvEmailLabel3"
+                    app:layout_constraintStart_toEndOf="@id/tvEmailLabel3"
+                    android:layout_marginStart="8dp"/>
+
+                <!-- Contact Details: Phone -->
+                <TextView
+                    android:id="@+id/tvPhoneLabel3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:"
+                    android:textColor="@color/primaryText"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmailLabel3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvDev3Phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0935 468 2013"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="@id/tvPhoneLabel3"
+                    app:layout_constraintStart_toEndOf="@id/tvPhoneLabel3"
+                    android:layout_marginStart="8dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

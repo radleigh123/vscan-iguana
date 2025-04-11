@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "device": {
+      "deviceId": "c649f6b3",
+      "name": "vivo 1811",
+      "serialNumber": "c649f6b3",
+      "isOnline": true,
+      "release": "8.1",
+      "sdk": 27,
+      "featureLevel": 27,
+      "model": "vivo 1811",
+      "isEmulator": false
+    },
+    "filter": "package:mine ",
+    "projectApplicationIds": [
+      "com.intprog.vscan",
+      "com.intprog.vscan.test"
+    ]
+  },
+  "logcatMessages": [
+    {
+      "header": {
+        "logLevel": "INFO",
+        "pid": 0,
+        "tid": 0,
+        "applicationId": "",
+        "processName": "",
+        "tag": "",
+        "timestamp": {
+          "seconds": 0,
+          "nanos": 0
+        }
+      },
+      "message": "---------------------------- PROCESS STARTED (7843) for package com.intprog.vscan ----------------------------"
+    },
+    {
+      "header": {
+        "logLevel": "INFO",
+        "pid": 0,
+        "tid": 0,
+        "applicationId": "",
+        "processName": "",
+        "tag": "",
+        "timestamp": {
+          "seconds": 0,
+          "nanos": 0
+        }
+      },
+      "message": "---------------------------- PROCESS ENDED (7843) for package com.intprog.vscan ----------------------------"
+    },
+    {
+      "header": {
+        "logLevel": "INFO",
+        "pid": 0,
+        "tid": 0,
+        "applicationId": "",
+        "processName": "",
+        "tag": "",
+        "timestamp": {
+          "seconds": 0,
+          "nanos": 0
+        }
+      },
+      "message": "---------------------------- PROCESS STARTED (9666) for package com.intprog.vscan ----------------------------"
+    }
+  ]
+}

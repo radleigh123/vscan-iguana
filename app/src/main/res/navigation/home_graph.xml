@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/DeveloperFragment"
+    >
+
+    <fragment
+        android:id="@+id/DeveloperFragment"
+        android:name="com.intprog.vscan.ui.home.DeveloperFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_developer"
+        >
+    </fragment>
+
+    <fragment
+        android:id="@+id/LandingFragment"
+        android:name="com.intprog.vscan.ui.home.LandingFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_landing"
+        >
+        <action
+            android:id="@+id/action_LandingFragment_to_DeveloperFragment"
+            app:destination="@id/DeveloperFragment"
+            />
+    </fragment>
+
+</navigation>

@@ -39,18 +39,15 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.98" />
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="LOGIN"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
             app:layout_constraintTop_toTopOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:srcCompat="@drawable/logo" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="?attr/textInputFilledStyle"
@@ -60,7 +57,7 @@
             android:hint="EMAIL ADD"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
-            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo"
             android:layout_marginTop="30dp"
             app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
             >
@@ -96,16 +93,28 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FORGOT PASSWORD?"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/filledTextFieldPassword"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            android:layout_marginTop="10dp"
+            />
+
         <Button
             style="@style/Widget.Material3.Button.ElevatedButton"
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="REGISTER"
+            android:text="LOGIN"
             android:textAllCaps="true"
             android:textSize="16sp"
             android:textColor="@color/white"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="60dp"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintTop_toBottomOf="@id/filledTextFieldPassword"
@@ -113,6 +122,19 @@
             android:paddingVertical="13dp"
             android:backgroundTint="@color/black_20"
             android:layout_marginHorizontal="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Register"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            android:layout_marginTop="10dp"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
